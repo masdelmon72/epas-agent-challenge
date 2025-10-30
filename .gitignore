@@ -1,0 +1,39 @@
+# File: .gitignore (nella root)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Environment
+.env
+*.env
+
+# Data
+data/raw/*.pdf
+data/processed/
+data/vectorstore/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
+last_response.html
