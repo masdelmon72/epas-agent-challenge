@@ -374,7 +374,7 @@ python scripts/run_agent.py
 - **EASA** for publishing comprehensive EPAS documentation
 - **UiPath** for the challenge and SDK
 - **LangChain** for the excellent RAG framework
-- **(OpenAI firstly but changed with HuggingFace)** for GPT-4 API
+- **(OpenAI/HuggingFace)** for GPT-4 API
 
 ---
 
