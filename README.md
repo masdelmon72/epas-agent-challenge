@@ -1,5 +1,6 @@
 # 🛩️ EPAS Assistant - AI Agent for Aviation Safety
-![Uploading image.png…]()
+<img width="295" height="416" alt="image" src="https://github.com/user-attachments/assets/e76d0bc4-cae2-437f-80b0-e24fbb05a6d3" />
+
 
 
 > **UiPath Specialist Coded Agent Challenge 2025**  
