@@ -319,7 +319,6 @@ Comprehensive documentation available in `/docs`:
 - **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and components
 - **[IMPLEMENTATION.md](docs/IMPLEMENTATION.md)** - Technical implementation
 - **[SUBMISSION.md](docs/SUBMISSION.md)** - Challenge submission document
-- **[API_REFERENCE.md](docs/API_REFERENCE.md)** - API documentation
 
 ---
 
