@@ -257,10 +257,10 @@ epas-agent-challenge/
 │   ├── test_rag.py            # Test RAG system
 │   └── run_agent.py           # Run agent
 │
-├── docs/                       # Documentation
-│   ├── ARCHITECTURE.md         # System architecture
-│   ├── IMPLEMENTATION.md       # Implementation details
-│   └── SUBMISSION.md           # Challenge submission
+│                           # Documentation
+├── ARCHITECTURE.md         # System architecture
+├── IMPLEMENTATION.md       # Implementation details
+├── SUBMISSION.md           # Challenge submission
 │
 ├── requirements.txt            # Python dependencies
 ├── .env.template              # Environment template
@@ -314,7 +314,7 @@ Try these example questions:
 
 ## 🎓 Documentation
 
-Comprehensive documentation available in `/docs`:
+Comprehensive documentation `:
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and components
 - **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Technical implementation
@@ -326,7 +326,7 @@ Comprehensive documentation available in `/docs`:
 
 This project is part of the UiPath Specialist Coded Agent Challenge. For questions or suggestions:
 
-1. Check existing documentation in `/docs`
+1. Check existing documentation
 2. Review code comments and docstrings
 3. Run test scripts to understand functionality
 
