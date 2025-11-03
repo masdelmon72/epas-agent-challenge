@@ -14,7 +14,7 @@ The UiPath SDK for Python might not be publicly available yet or may require spe
 
 ```bash
 # Try installing:
-pip install uipath-sdk
+pip install uipath
 
 # If not available, you'll see:
 # ERROR: Could not find a version that satisfies the requirement uipath-sdk
@@ -44,7 +44,7 @@ If you have access to UiPath SDK:
 
 1. **Install from official source**:
    ```bash
-   pip install uipath-sdk
+   pip install uipath
    # Or from wheel file if provided
    pip install uipath_sdk-1.0.0-py3-none-any.whl
    ```
