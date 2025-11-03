@@ -3,7 +3,7 @@
 
 # Core Framework
 #uipath-sdk>=1.0.0
-uipath>=1.0.0
+#uipath>=1.0.0
 
 # LangChain Ecosystem
 langchain>=0.1.0
