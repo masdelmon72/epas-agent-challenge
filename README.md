@@ -316,9 +316,9 @@ Try these example questions:
 
 Comprehensive documentation available in `/docs`:
 
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and components
-- **[IMPLEMENTATION.md](docs/IMPLEMENTATION.md)** - Technical implementation
-- **[SUBMISSION.md](docs/SUBMISSION.md)** - Challenge submission document
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and components
+- **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Technical implementation
+- **[SUBMISSION.md](SUBMISSION.md)** - Challenge submission document
 
 ---
 
