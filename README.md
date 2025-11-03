@@ -1,4 +1,6 @@
 # 🛩️ EPAS Assistant - AI Agent for Aviation Safety
+![Uploading image.png…]()
+
 
 > **UiPath Specialist Coded Agent Challenge 2025**  
 > An AI-powered assistant specialized in European Plan for Aviation Safety (EPAS)
