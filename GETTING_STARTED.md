@@ -83,7 +83,7 @@ bash setup_environment.sh
 pip install -r requirements.txt
 
 # This will install:
-# - uipath-sdk
+# - uipath
 # - langchain and related packages
 # - sentence-transformers
 # - faiss-cpu

@@ -1,4 +1,7 @@
 # 🛩️ EPAS Assistant - AI Agent for Aviation Safety
+<img width="295" height="416" alt="image" src="https://github.com/user-attachments/assets/e76d0bc4-cae2-437f-80b0-e24fbb05a6d3" />
+
+
 
 > **UiPath Specialist Coded Agent Challenge 2025**  
 > An AI-powered assistant specialized in European Plan for Aviation Safety (EPAS)
@@ -254,10 +257,10 @@ epas-agent-challenge/
 │   ├── test_rag.py            # Test RAG system
 │   └── run_agent.py           # Run agent
 │
-├── docs/                       # Documentation
-│   ├── ARCHITECTURE.md         # System architecture
-│   ├── IMPLEMENTATION.md       # Implementation details
-│   └── SUBMISSION.md           # Challenge submission
+│                           # Documentation
+├── ARCHITECTURE.md         # System architecture
+├── IMPLEMENTATION.md       # Implementation details
+├── SUBMISSION.md           # Challenge submission
 │
 ├── requirements.txt            # Python dependencies
 ├── .env.template              # Environment template
@@ -311,12 +314,11 @@ Try these example questions:
 
 ## 🎓 Documentation
 
-Comprehensive documentation available in `/docs`:
+Comprehensive documentation `:
 
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and components
-- **[IMPLEMENTATION.md](docs/IMPLEMENTATION.md)** - Technical implementation
-- **[SUBMISSION.md](docs/SUBMISSION.md)** - Challenge submission document
-- **[API_REFERENCE.md](docs/API_REFERENCE.md)** - API documentation
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and components
+- **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Technical implementation
+- **[SUBMISSION.md](SUBMISSION.md)** - Challenge submission document
 
 ---
 
@@ -324,7 +326,7 @@ Comprehensive documentation available in `/docs`:
 
 This project is part of the UiPath Specialist Coded Agent Challenge. For questions or suggestions:
 
-1. Check existing documentation in `/docs`
+1. Check existing documentation
 2. Review code comments and docstrings
 3. Run test scripts to understand functionality
 
@@ -371,7 +373,7 @@ python scripts/run_agent.py
 - **EASA** for publishing comprehensive EPAS documentation
 - **UiPath** for the challenge and SDK
 - **LangChain** for the excellent RAG framework
-- **OpenAI** for GPT-4 API
+- **(OpenAI/HuggingFace)** for GPT-4 API
 
 ---
 

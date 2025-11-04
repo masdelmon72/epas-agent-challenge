@@ -2,14 +2,14 @@
 
 ## 1. OVERVIEW SISTEMA
 
-### Obiettivo
-Creare un agente specializzato EPAS (European Plan for Aviation Safety) che:
-- Risponde a domande su aviation safety usando 3 volumi EASA
-- Fornisce citazioni precise (volume, sezione, pagina)
-- Valida compliance con regolamenti
-- Cross-referenzia informazioni tra volumi
+### Objective
+Create a specialized EPAS (European Plan for Aviation Safety) agent who:
+- Answers aviation safety questions using three EASA volumes
+- Provides accurate citations (volume, section, page)
+- Validates compliance with regulations
+- Cross-references information between volumes
 
-### Stack Tecnologico
+### Technology Stack
 - **Agent Framework**: UiPath SDK (Python)
 - **RAG Framework**: LangChain
 - **Vector Store**: FAISS
@@ -19,7 +19,7 @@ Creare un agente specializzato EPAS (European Plan for Aviation Safety) che:
 
 ---
 
-## 2. ARCHITETTURA LAYERED
+## 2. LAYERED ARCHITECTURE 
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -83,7 +83,7 @@ Creare un agente specializzato EPAS (European Plan for Aviation Safety) che:
 
 ---
 
-## 3. COMPONENTI DETTAGLIATI
+## 3. COMPONENTS
 
 ### 3.1 Data Processing Pipeline
 
@@ -117,9 +117,9 @@ PDF → Text Extraction → Section Detection →
 
 **Retrieval Strategy**:
 1. **Semantic Search**: Query embedding → Top-k chunks (k=10)
-2. **Reranking**: Cross-encoder per relevance
-3. **Filtering**: Per volume/section se specificato
-4. **Context Building**: Max 3000 tokens di contesto
+2. **Reranking**: Cross-encoder for relevance
+3. **Filtering**: By volume/section if specified
+4. **Context Building**: Max 3000 context tokens
 
 **Retriever Configuration**:
 ```python
@@ -140,14 +140,14 @@ retriever = VectorStoreRetriever(
 @tool
 def semantic_search_epas(query: str, volume: Optional[str] = None) -> str:
     """
-    Cerca semanticamente nei documenti EPAS.
+    Search EPAS documents semantically.
     
     Args:
-        query: Domanda dell'utente
-        volume: Filtra per volume (I, II, III) - opzionale
+        query: User question
+        volume: Filter by volume (I, II, III) - optional
     
     Returns:
-        Contesto rilevante con citazioni
+        Relevant context with citations
     """
 ```
 
@@ -156,13 +156,13 @@ def semantic_search_epas(query: str, volume: Optional[str] = None) -> str:
 @tool
 def find_cross_references(section_id: str) -> str:
     """
-    Trova riferimenti incrociati tra volumi.
+    Finds cross-references between volumes.
     
     Args:
-        section_id: ID sezione (es. "CAT.GEN.MPA.210")
+        section_id: Section ID (e.g., "CAT.GEN.MPA.210")
     
     Returns:
-        Sezioni correlate in altri volumi
+        Related sections in other volumes
     """
 ```
 
@@ -174,14 +174,14 @@ def validate_safety_compliance(
     priority: str
 ) -> str:
     """
-    Valida compliance con EPAS safety risk portfolio.
+    Valid compliance with EPAS safety risk portfolio.
     
     Args:
-        action: Azione proposta
-        priority: Livello priorità (strategic/operational)
+        action: Proposed action
+        priority: Priority level (strategic/operational)
     
     Returns:
-        Analisi compliance e raccomandazioni
+        Compliance analysis and recommendations
     """
 ```
 
@@ -192,10 +192,7 @@ from uipath import Agent, Tool
 
 agent = Agent(
     name="EPASAssistant",
-    description="""AI assistant specializzato in European Plan 
-    for Aviation Safety (EPAS). Esperto in regolamenti aviation 
-    safety EASA, azioni implementative e safety risk portfolio.""",
-    
+    description="""AI assistant specializing in the European Plan for Aviation Safety (EPAS). Expert in EASA aviation safety regulations, implementation actions, and safety risk portfolios.""",
     tools=[
         semantic_search_tool,
         cross_reference_tool,
@@ -204,7 +201,7 @@ agent = Agent(
     
     llm_config={
         "model": "gpt-4",
-        "temperature": 0.2,  # Bassa per precisione
+        "temperature": 0.2,  # Low for accuracy
         "max_tokens": 2000
     },
     
@@ -270,7 +267,7 @@ IMPORTANT:
 ## 5. PERFORMANCE OPTIMIZATION
 
 ### Embedding Strategy
-- **Model**: all-MiniLM-L6-v2 (22MB, fast)
+- **Model**: mistralai/Mistral-7B-Instruct-v0.2 (HuggingFace)
 - **Dimension**: 384 (bilanciato)
 - **Batch Processing**: 32 chunks per batch
 - **Caching**: Embeddings salvati su disco
@@ -282,9 +279,9 @@ IMPORTANT:
 - **Max Results**: Top 10, reranked to top 5
 
 ### Memory Management (8GB RAM)
-- Lazy loading documenti
-- Streaming per PDF grandi
-- Vector store su disco (mmap)
+- Lazy loading documents
+- Streaming for large PDFs
+- Vector store on disk (mmap)
 - Batch processing
 
 ---
@@ -322,26 +319,26 @@ POST /api/v1/query
 
 ## 7. EVALUATION METRICS
 
-Per la challenge:
-- **Accuracy**: Correttezza risposte vs. documenti
-- **Citation Precision**: Accuratezza citazioni
-- **Response Time**: < 5 secondi
+For the challenge:
+- **Accuracy**: Correctness of answers vs. documents
+- **Citation Precision**: Accuracy of citations
+- **Response Time**: < 5 seconds
 - **Context Relevance**: Score > 0.8
-- **User Satisfaction**: Feedback qualitativo
+- **User Satisfaction**: Qualitative feedback
 
 ---
 
 ## 8. DIFFERENTIATORI PER CHALLENGE
 
-✅ **Multi-Document RAG**: 3 volumi correlati  
-✅ **Intelligent Chunking**: Rispetta struttura documenti  
-✅ **Precise Citations**: Volume + Section + Page  
-✅ **Cross-Referencing**: Collegamenti automatici  
-✅ **Domain-Specific**: Aviation safety terminology  
-✅ **UiPath SDK**: Agente nativo, non wrapper  
-✅ **LangChain**: RAG chain professionale  
-✅ **Scalable**: Architettura modulare  
+✅ **Multi-Document RAG**: 3 related volumes
+✅ **Intelligent Chunking**: Respects document structure
+✅ **Precise Citations**: Volume + Section + Page
+✅ **Cross-Referencing**: Automatic links
+✅ **Domain-Specific**: Aviation safety terminology
+✅ **UiPath SDK**: Native agent, not wrapper
+✅ **LangChain**: Professional RAG chain
+✅ **Scalable**: Modular architecture  
 
 ---
 
-**Next Steps**: Implementazione codice per ogni componente
+**Next Steps**:Code implementation for each component
