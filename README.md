@@ -350,7 +350,7 @@ This project is submitted for the UiPath Specialist Coded Agent Challenge 2025.
 
 ## 🎬 Demo
 
-**Video Demo**: [Link to demo video if available]
+**Video Demo**: https://forum.uipath.com/t/epas-agent-assistant/5676082
 
 **Live Demo**: Run the agent yourself!
 
